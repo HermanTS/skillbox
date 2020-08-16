@@ -11,5 +11,8 @@ int main(int argc, char **argv) {
 
 	std::cout << v3 << "\n";
 	std::cout << "lengt of v3 = " << static_cast<float>(v3) << "\n";
-	std::cout << "v1 * 2 = " << v1 * 2;
+	std::cout << "v1 * 2 = " << v1 * 2 << "\n";
+	std::cout << "v3 - v2 = " << v3 - v2 << "\n";
+
+	
 }

@@ -42,6 +42,11 @@ Vector operator+(const Vector& a, const Vector& b)
 	return Vector(a.x + b.x, a.y + b.y, a.z + b.z);
 }
 
+Vector operator-(const Vector& a, const Vector& b)
+{
+	return Vector(a.x - b.x, a.y - b.y, a.z - b.z);
+}
+
 Vector operator*(const Vector& a, int mul)
 {
 	return Vector(a.x * mul, a.y * mul, a.z * mul);
