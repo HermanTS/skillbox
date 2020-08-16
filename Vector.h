@@ -18,7 +18,8 @@ public:
     operator float();
     float operator[](int index);
 
-    friend Vector operator+(const Vector& a, const Vector& b)
+    friend Vector operator+(const Vector& a, const Vector& b);
+    friend Vector operator*(const Vector& a, int mul);
     friend std::ostream& operator<<(std::ostream& out, const Vector& v);
     friend bool operator>(const Vector& a, const Vector& b);
 

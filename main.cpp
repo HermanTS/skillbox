@@ -10,5 +10,6 @@ int main(int argc, char **argv) {
 	v3 = v1 + v2;
 
 	std::cout << v3 << "\n";
-	std::cout << "lengt of v3 = " << static_cast<float>(v3);
+	std::cout << "lengt of v3 = " << static_cast<float>(v3) << "\n";
+	std::cout << "v1 * 2 = " << v1 * 2;
 }
