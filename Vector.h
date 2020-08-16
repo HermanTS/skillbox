@@ -22,6 +22,7 @@ public:
     friend Vector operator-(const Vector& a, const Vector& b);
     friend Vector operator*(const Vector& a, int mul);
     friend std::ostream& operator<<(std::ostream& out, const Vector& v);
+    friend std::istream& operator>>(std::istream& in, Vector& v);
     
 
 private:

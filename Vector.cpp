@@ -57,3 +57,15 @@ std::ostream& operator<<(std::ostream& out, const Vector& v)
 	out << v.x << " " << v.y << " " << v.z;
 	return out;
 }
+
+std::istream& operator>>(std::istream& in, Vector& v)
+{
+	std::cout << "Enter X: ";
+	in >> v.x;
+	std::cout << "Enter Y: ";
+	in >> v.y;
+	std::cout << "Enter Z: ";
+	in >> v.z;
+
+	return in;
+}

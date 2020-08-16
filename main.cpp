@@ -14,5 +14,6 @@ int main(int argc, char **argv) {
 	std::cout << "v1 * 2 = " << v1 * 2 << "\n";
 	std::cout << "v3 - v2 = " << v3 - v2 << "\n";
 
-	
+	std::cin >> v2;
+	std::cout << v2;
 }
