@@ -6,6 +6,7 @@ CFLAGS=-c -Wall
 LDFLAGS=
 SOURCES=main.cpp 
 SOURCES+=Vector.cpp 
+SOURCES+=DynamicMatrix.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 
 
