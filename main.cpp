@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Vector.h"
 #include "DynamicMatrix.h"
+#include "Car.h"
 
 void vectorTest()
 {
@@ -55,5 +56,17 @@ void matrixTest()
 
 int main(int argc, char** argv)
 {
-	matrixTest();
+	Car c(Engine(150), Wheel(17), Wheel(17), Wheel(18), Wheel(18), 150);
+
+	std::cout << c << '\n';
+
+
+
+	//Bicycle t(Wheel(20), Wheel(20), 300);
+
+	//std::cout << t << '\n';
+
+
+
+	return 0;
 }
