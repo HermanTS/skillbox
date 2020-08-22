@@ -15,6 +15,7 @@ class Car : public RoadVehicle
 {
 public:
 	Car(Engine e, Wheel fl, Wheel fr, Wheel bl, Wheel br, float clearance);
+	const Engine& getEngine();
 
 private:
 	Engine engine;

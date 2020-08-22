@@ -10,6 +10,12 @@ Car::Car(Engine e, Wheel fl, Wheel fr, Wheel bl, Wheel br, float clearance):
     backwardRight = br;
 }
 
+const Engine& Car::getEngine()
+{
+    return engine;
+}
+
+
 std::ostream& Car::print(std::ostream& out) const
 {
     out << "Car Engine: " << engine.getPower() 

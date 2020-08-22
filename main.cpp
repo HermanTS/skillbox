@@ -1,19 +1,27 @@
 #include <iostream>
+#include <vector>
 
 #include "Vector.h"
 #include "DynamicMatrix.h"
 
 #include "Car.h"
 #include "Bicycle.h"
+#include "WaterVehicle.h"
+#include "Circle.h"
 
 void vectorTest();
 void matrixTest();
 
 void lessonVFunc_part1();
+void lessonVFunc_part2();
 
 int main(int argc, char** argv)
 {
+	std::cout << "PART ONE ------------ \n";
 	lessonVFunc_part1();
+
+	std::cout << "PATH TWO ------------ \n";
+	lessonVFunc_part2();
 
 	return 0;
 }
@@ -27,6 +35,45 @@ void lessonVFunc_part1()
 	Bicycle t(Wheel(20), Wheel(20), 300);
 
 	std::cout << t << '\n';
+}
+
+float getHighestPower(std::vector<Vehicle*> v);
+
+void lessonVFunc_part2()
+{
+	std::vector<Vehicle*> v;
+
+	v.push_back(new Car(Engine(150), Wheel(17), Wheel(17), Wheel(18), Wheel(18), 250));
+
+	v.push_back(new Circle(Vector(1, 2, 3), 7));
+
+	v.push_back(new Car(Engine(200), Wheel(19), Wheel(19), Wheel(19), Wheel(19), 130));
+
+	v.push_back(new WaterVehicle(5000));
+
+	for (auto it: v)
+	{
+		std::cout << *it << "\n";
+	}
+
+	std::cout << "The highest power is " << getHighestPower(v) << '\n'; 
+
+	v.clear();
+}
+
+float getHighestPower(std::vector<Vehicle*> v)
+{
+	float max = 0;
+	for (auto it : v)
+	{
+		if (dynamic_cast<Car*>(it) != nullptr)
+		{
+			float power = dynamic_cast<Car*>(it)->getEngine().getPower();
+			max = (max > power) ? max : power;
+		}
+	}
+
+	return max;
 }
 
 

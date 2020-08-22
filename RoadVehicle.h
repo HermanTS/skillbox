@@ -1,5 +1,5 @@
 /*
- * Vehicle.h
+ * RoadVehicle.h
  *
  *  Created on: 21 рту. 2020 у.
  *      Author: gherman.ts
