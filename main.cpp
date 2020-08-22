@@ -2,6 +2,8 @@
 #include "Vector.h"
 #include "DynamicMatrix.h"
 
+#include "Fraction.h"
+
 void vectorTest()
 {
 	Vector v1(0, 1, 2);
@@ -53,7 +55,30 @@ void matrixTest()
 	m.PrintData();
 }
 
+void fractionTest();
+
 int main(int argc, char** argv)
 {
-	matrixTest();
+	fractionTest();
+}
+
+
+void fractionTest()
+{
+	std::cout << "enter nomenator of fraction \n";
+	int nomenator;
+	std::cin >> nomenator;
+	std::cout << "enter denomerator of fraction \n";
+	int denomerator;
+	std::cin >> denomerator;
+
+	Fraction* f1;
+	try
+	{
+		f1 = new Fraction(nomenator, denomerator);
+	}
+	catch (const std::exception& exception)
+	{
+		std::cerr << "can't make fraction: " << exception.what();
+	}
 }

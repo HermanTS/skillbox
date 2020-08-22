@@ -7,6 +7,9 @@ LDFLAGS=
 SOURCES=main.cpp 
 SOURCES+=Vector.cpp 
 SOURCES+=DynamicMatrix.cpp
+
+#exeptions lesson
+SOURCES+=Fraction.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 
 
