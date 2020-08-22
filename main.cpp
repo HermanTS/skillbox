@@ -1,7 +1,34 @@
 #include <iostream>
+
 #include "Vector.h"
 #include "DynamicMatrix.h"
+
 #include "Car.h"
+#include "Bicycle.h"
+
+void vectorTest();
+void matrixTest();
+
+void lessonVFunc_part1();
+
+int main(int argc, char** argv)
+{
+	lessonVFunc_part1();
+
+	return 0;
+}
+
+void lessonVFunc_part1()
+{
+	Car c(Engine(150), Wheel(17), Wheel(17), Wheel(18), Wheel(18), 150);
+
+	std::cout << c << '\n';
+
+	Bicycle t(Wheel(20), Wheel(20), 300);
+
+	std::cout << t << '\n';
+}
+
 
 void vectorTest()
 {
@@ -20,7 +47,7 @@ void vectorTest()
 	std::cout << v2;
 }
 
-void matrixTest()
+void matrixTest() 
 {
 	DynamicMatrix m(3, 4, "first");
 	m.PrintData();
@@ -52,21 +79,4 @@ void matrixTest()
 	m2.PrintData();
 	m = m2;
 	m.PrintData();
-}
-
-int main(int argc, char** argv)
-{
-	Car c(Engine(150), Wheel(17), Wheel(17), Wheel(18), Wheel(18), 150);
-
-	std::cout << c << '\n';
-
-
-
-	//Bicycle t(Wheel(20), Wheel(20), 300);
-
-	//std::cout << t << '\n';
-
-
-
-	return 0;
 }

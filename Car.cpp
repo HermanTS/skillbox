@@ -14,8 +14,8 @@ std::ostream& Car::print(std::ostream& out) const
 {
     out << "Car Engine: " << engine.getPower() 
         << " Wheels: " 
-        << frontLeft.getRadius() << frontRight.getRadius() 
-        << backwardLeft.getRadius() << backwardRight.getRadius() 
+        << frontLeft.getRadius() << " " << frontRight.getRadius() << " "
+        << backwardLeft.getRadius() << " " << backwardRight.getRadius() << " "
         << "Ride height: " << clearance;
     return out;
 }

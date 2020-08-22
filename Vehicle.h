@@ -17,7 +17,7 @@ public:
 	friend std::ostream& operator<<(std::ostream& out, const Vehicle& v);
 
 private:
-	virtual std::ostream& print(std::ostream& out) const;
+	virtual std::ostream& print(std::ostream& out) const = 0;
 };
 
 #endif // !VEHICLE_H_
