@@ -15,7 +15,7 @@ class RoadVehicle :
 {
 public:
     RoadVehicle(float clearance);
-
+    ~RoadVehicle() override {};
 private:
     std::ostream& print(std::ostream& out) const override;
 

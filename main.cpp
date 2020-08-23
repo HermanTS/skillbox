@@ -56,8 +56,12 @@ void lessonVFunc_part2()
 		std::cout << *it << "\n";
 	}
 
-	std::cout << "The highest power is " << getHighestPower(v) << '\n'; 
+	std::cout << "The highest power is " << getHighestPower(v) << '\n';
 
+    for (auto it: v)
+    {
+        delete it;
+    }
 	v.clear();
 }
 

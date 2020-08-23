@@ -14,7 +14,7 @@ class Bicycle : public RoadVehicle
 {
 public:
 	Bicycle(Wheel front, Wheel rear, float clearance);
-
+	~Bicycle() override {};
 private:
 	Wheel front;
 	Wheel rear;

@@ -14,6 +14,7 @@ class Vehicle
 {
 public:
 	Vehicle() {};
+    virtual ~Vehicle(){};
 	friend std::ostream& operator<<(std::ostream& out, const Vehicle& v);
 
 private:

@@ -12,7 +12,7 @@ class WaterVehicle : public Vehicle
 {
 public:
     WaterVehicle(float draft);
-
+    ~WaterVehicle() override {};
 private:
     std::ostream& print(std::ostream& out) const override;
 

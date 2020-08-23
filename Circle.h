@@ -16,6 +16,7 @@ class Circle : public RoadVehicle
 {
 public:
 	Circle(Vector centr, float clearance);
+	~Circle() override {};
 private:
 	std::ostream& print(std::ostream& out) const override;
 
