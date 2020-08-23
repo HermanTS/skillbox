@@ -72,7 +72,7 @@ void fractionTest()
 	int denomerator;
 	std::cin >> denomerator;
 
-	Fraction* f1;
+	Fraction* f1 = nullptr;
 	try
 	{
 		f1 = new Fraction(nomenator, denomerator);
@@ -81,4 +81,7 @@ void fractionTest()
 	{
 		std::cerr << "can't make fraction: " << exception.what();
 	}
+
+	if (f1 != nullptr)
+		delete f1;
 }
